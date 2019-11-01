@@ -31,3 +31,27 @@
     transform: rotate(360deg);
   }
 }
+
+.dark-mode {
+  color: white !important;
+  background-color: black;
+  transition-duration: 2s;
+}
+
+.ui.cards{
+  margin-left: 5vw;
+}
+.ui card{
+  background-color: navajowhite;
+}
+
+.ui.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition-duration: 1s;
+}
+ Button {
+  margin-bottom: 20px !important;
+  position: relative;
+  width: 100vw;
+}
