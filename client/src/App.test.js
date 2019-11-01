@@ -3,24 +3,24 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { render, fireEvent } from "@testing-library/react";
 
-test('renders without crashing', () => {
+it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 
-test('darkmode', () => {
-  let clicked = false;
-  const { getByText } = render(<App darkmode = {() => clicked = true} />);
-  const  toggleDark = getByText(/dark mode/i);
-  fireEvent.click(toggleDark);
-  expect(clicked).toBe(false);
+it('darkmode', () => {
+  // let clicked = false;
+  const {getByText} = render(<App useDarkMode = {() => clicked = true} />);
+  const darkmode = getByText(/^dark mode$/i);
+  fireEvent.click(darkmode);
+  // expect(clicked).toBe(true);
 });
 
-test('darkmode', () => {
-  let clicked = true;
-  const { getByText } = render(<App darkmode = {() => clicked = false} />);
-  const  toggleDark = getByText(/dark mode/i);
-  fireEvent.click(toggleDark);
-  expect(clicked).toBe(true);
-});
+test('header displaying', () => {
+  const { getByText } = render(<App />);
+  getByText("Women's World Cup");
+})
+
+
+

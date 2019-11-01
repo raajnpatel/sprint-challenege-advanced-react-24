@@ -17,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Women's World Cup</h1>
       <Button onClick={() => handleClick()}>Dark Mode</Button>
       <SoccerClassComponent/>
     </div>
