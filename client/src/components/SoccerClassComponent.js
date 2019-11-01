@@ -15,7 +15,7 @@ class SoccerClassComponent extends React.Component {
         axios
             .get("http://localhost:5000/api/players")
             .then(response => {
-                console.log(response);
+                // console.log(response);
                 this.setState({data: response.data});
             })
             .catch(err => console.log(err));
